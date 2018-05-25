@@ -1,0 +1,33 @@
+array (
+  'default' => 
+  Overtrue\Socialite\User::__set_state(array(
+     'attributes' => 
+    array (
+      'id' => 'o4_GMxBh2HyA8wmQpxxE2mLxAV84',
+      'name' => NULL,
+      'nickname' => NULL,
+      'avatar' => NULL,
+      'email' => NULL,
+      'original' => 
+      array (
+        'access_token' => '9_RTRbUxjyRNsFdjRaq-bLJsVGEXEGEsJjoJcTAOPSl7pyGCSAzE-t7IQfPK3IXV4fStOpZ_vVRy8s2jV7dUUOdA',
+        'expires_in' => 7200,
+        'refresh_token' => '9_2hYLeCk2zP85JUnE4PSqIddDmlEGyk_xFABSL6klKFgSrhEjDTxbf1yHDXdEC7TEq0JBPJPGbrwkRcAbpR-7ow',
+        'openid' => 'o4_GMxBh2HyA8wmQpxxE2mLxAV84',
+        'scope' => 'snsapi_base',
+      ),
+      'token' => 
+      Overtrue\Socialite\AccessToken::__set_state(array(
+         'attributes' => 
+        array (
+          'access_token' => '9_RTRbUxjyRNsFdjRaq-bLJsVGEXEGEsJjoJcTAOPSl7pyGCSAzE-t7IQfPK3IXV4fStOpZ_vVRy8s2jV7dUUOdA',
+          'expires_in' => 7200,
+          'refresh_token' => '9_2hYLeCk2zP85JUnE4PSqIddDmlEGyk_xFABSL6klKFgSrhEjDTxbf1yHDXdEC7TEq0JBPJPGbrwkRcAbpR-7ow',
+          'openid' => 'o4_GMxBh2HyA8wmQpxxE2mLxAV84',
+          'scope' => 'snsapi_base',
+        ),
+      )),
+      'provider' => 'WeChat',
+    ),
+  )),
+)
