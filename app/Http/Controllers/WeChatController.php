@@ -40,7 +40,6 @@ class WeChatController extends Controller
                         case 'subscribe':
 //                            $wechat = app('wechat.official_account');
 //                            $user =$wechat->user->get($message['FromUserName']);
-
                             $wxUser = Wxuser::where('openid', $message['FromUserName'])->first();
                             if($wxUser){
                                 $wxUser ->subscribe =1;
@@ -118,11 +117,11 @@ class WeChatController extends Controller
     }
 
     public function hx(){
-        $user =session('wechat.oauth_user.default');
-        $data = Wxuser::where("openid", $user->id)->get()->first();
-        dd($data);exit;
+//        $user =session('wechat.oauth_user.default');
+//        $data = Wxuser::where("openid", $user->id)->get()->first();
+//        dd($data);exit;
        $hx= Common::hx();
-       dd($hx);
+       dd($hx);exit;
     }
 
 

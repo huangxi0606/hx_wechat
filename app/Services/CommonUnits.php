@@ -1,26 +1,1 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: xumu
- * Date: 2018/5/1
- * Time: 12:01
- */
-namespace App\Services;
-
-/**
- * 通用工具服务类
- */
-class CommonUnits
-{
-    //检测是否从微信打开
-    public static function isWechat() {
-        if (isset($_SERVER['HTTP_USER_AGENT']) && strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') !== false) {
-            return true;
-        }
-        return false;
-    }
-    public static function hx() {
-       return '12344';
-    }
-
-}
+<?php/** * Created by PhpStorm. * User: xumu * Date: 2018/5/1 * Time: 12:01 */namespace App\Services;/** * 通用工具服务类 */class CommonUnits{    //检测是否从微信打开    public static function isWechat() {        if (isset($_SERVER['HTTP_USER_AGENT']) && strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') !== false) {            return true;        }        return false;    }    public static function hx() {       return '12344';    }    //检测是否座机号码    public static function isTel($str) {        if (!$str) {            return false;        }        return preg_match("/^([0-9]{2,4}-)?(0[0-9]{2,3}-)?([2-9][0-9]{6,7})+(-[0-9]{1,4})?$/", $str);    }    //检测是否手机号码    public static function isMobile($str) {        if (!$str) {            return false;        }        return preg_match("/^(13|14|15|17|18)[0-9]{9}$/", $str);    }    //检测是否是图片    public static function isImage($file) {        return preg_match("/(jpg|gif|jpeg|png|svg)$/i", $file);    }    //检测是否身份证号    public static function isIdCard($str) {        $city = array(            '11', '12', '13', '14', '15', '21', '22',            '23', '31', '32', '33', '34', '35', '36',            '37', '41', '42', '43', '44', '45', '46',            '50', '51', '52', '53', '54', '61', '62',            '63', '64', '65', '71', '81', '82', '91'        );        if (!preg_match('/^([\d]{17}[xX\d]|[\d]{15})$/', $str)) return false;        if (!in_array(substr($str, 0, 2), $city)) return false;        $str = preg_replace('/[xX]$/i', 'a', $str);        $len = strlen($str);        if ($len == 18) {            $day = substr($str, 6, 4) . '-' . substr($str, 10, 2) . '-' . substr($str, 12, 2);        } else {            $day = '19' . substr($str, 6, 2) . '-' . substr($str, 8, 2) . '-' . substr($str, 10, 2);        }        if (date('Y-m-d', strtotime($day)) != $day) return false;        if ($len == 18) {            $sum = 0;            for ($i = 17; $i >= 0; $i--) {                $sub = substr($str, 17 - $i, 1);                $sum += (pow(2, $i) % 11) * (($sub == 'a') ? 10 : intval($sub, 11));            }            if ($sum % 11 != 1) return false;        }        return true;    }    // 获取随机字符串    public static function getRand($len = 32, $type = 'all') {        switch ($type) {            case 'all':                $char = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghijklmnopqrstuvwxyz';                break;            case 'char':                $char = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';                break;            case 'num':                $char = '1234567890';                break;        }        $strlen = strlen($char) - 1;        $str = '';        for ($i = 0; $i < $len; $i++) {            $str .= substr($char, mt_rand(0, $strlen), 1);        }        return $str;    }    //输出CSV文件    public static function getCsv($filename, $data) {        header("Content-type:text/csv");        header("Content-Disposition:attachment;filename=" . $filename);        header('Cache-Control:must-revalidate,post-check=0,pre-check=0');        header('Expires:0');        header('Pragma:public');        echo $data;    }}

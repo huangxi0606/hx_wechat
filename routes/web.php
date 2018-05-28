@@ -20,4 +20,9 @@ Route::group(['middleware' => ['web', 'wechat.oauth']], function () {
         $user = session('wechat.oauth_user'); // 拿到授权用户资料    openid
     });
     Route::any('/wechat/hx', 'WeChatController@hx');
+    Route::any('/hhhb/index', 'HhhbController@index');
+    Route::any('/hhhb/view', 'HhhbController@view');
+    Route::any('/profile', 'BaseController@profile');
+    Route::any('/base/callback', 'BaseController@callback');
+    Route::any('/hh/index', 'HhController@index');
 });
