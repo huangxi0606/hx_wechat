@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Hhhbuser extends Model
+class HhhbJoin extends Model
 {
     //
-    protected $table = 'hhhbuser';
+    protected $table = 'hhhbjoin';
     protected $guarded = [];
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Wxuser;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Log;
 use Common;
 
@@ -120,8 +121,13 @@ class WeChatController extends Controller
 //        $user =session('wechat.oauth_user.default');
 //        $data = Wxuser::where("openid", $user->id)->get()->first();
 //        dd($data);exit;
-       $hx= Common::hx();
-       dd($hx);exit;
+//       $hx= Common::hx();
+//       dd($hx);exit;
+        $app = app('wechat.official_account');
+        $time =Carbon::now();
+
+        $app->broadcasting->sendText("今天是.$time->yaer.年.$time->month.月.$time->day,今天会是美好的一天", ['o4_GMxDe5WYy7K5gp9qsMyHvV9F0', 'o4_GMxBh2HyA8wmQpxxE2mLxAV84','o4_GMxA44AKyUgcTBJR1ZDWhsxKs','o4_GMxJ7YhbarNt5N49qsvTTV-hw','o4_GMxJjpU6QalHI1fj7c9f7v9Qc']);
+//        $app->broadcasting->sendText("儿童节快乐啊，小朋友。", ['o4_GMxDe5WYy7K5gp9qsMyHvV9F0', 'o4_GMxBh2HyA8wmQpxxE2mLxAV84','o4_GMxJ7YhbarNt5N49qsvTTV-hw']);
     }
 
 

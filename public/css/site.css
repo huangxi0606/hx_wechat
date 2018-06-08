@@ -1,0 +1,85 @@
+/*网站前端样式表*/
+html,body       {width:100%;height:100%;}
+h1              {font-size:20px;}
+h2              {font-size:16px;}
+h3              {font-size:14px;}
+a               {color:#000;text-decoration:none;}
+a:hover         {color:#F60;}
+/*首页*/
+.header         {width:100%;height:80px;background:#25a6df;margin-bottom:20px;}
+.footer         {width:100%;height:60px;line-height:60px;border-top:1px #ddd solid;background:#f9f9f9;margin-top:20px;}
+.logo           {width:173px;height:50px;margin-top:15px;}
+.topbtn         {line-height:80px;color:#fff;}
+.card           {border-radius:10px;background:#eeeeee;padding:50px;line-height:30px;}
+.card h2        {font-weight:bold;}
+/*错误页*/
+.site-error     {}
+
+/*登录页*/
+.site-login     {width:60%;margin:0 auto;}
+
+/*注册页*/
+.site-signup    {}
+
+/*活动页*/
+.site-form      {width:80%;height:auto;max-width:512px;margin:0 auto;overflow:hidden;padding-top:5%;}
+.site-form label{margin-top:5%;margin-bottom:3%;}
+
+/*左侧折叠菜单*/
+.user-panel .list-group-item.active{background-color:#428bca;border-color:#428bca;}
+.user-panel .list-group-item a{color:#555;display:block;}
+.user-panel .list-group-item a:hover{text-decoration:none;}
+.user-panel .list-group-item.active a{color:#fff;}
+
+/*操作导航选项卡*/
+.user-nav{margin-bottom:20px;border-bottom:1px solid #428bca;}
+.user-nav li a:hover{border-color:#eee #eee #428bca #eee;}
+.user-nav li.active a,.user-nav li.active a:hover,.user-nav li.active a:focus{color:#FFF; background-color:#428bca; border-color:#428bca;}
+
+/*搜索表单文本框*/
+.user-search .help-block{margin-top:0;}
+.panel-body .form-group .help-block{margin-bottom:0px;}
+.user-number{width:20%;float:left;margin-right:10px;}
+
+/*数据列表里的表格*/
+.grid-view .table{margin-bottom:0;}
+.grid-view .summary{float:left;margin: 10px 0 0 0;}
+.grid-view .pagination{float:right;margin: 10px 0 0 0;}
+.grid-view .table thead tr th{border-bottom:2px #ddd solid;}
+.grid-view .table thead tr th a{color:#333;}
+.grid-view .table thead tr th:last-child{text-align:right;}
+.grid-view .table tbody tr td{vertical-align:inherit;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.grid-view .table tbody tr td:last-child{text-align:right;}
+.grid-view .table tbody tr:last-child td{border-bottom:1px #ddd solid;}
+.gird-btn-group{}
+/*数据列表里的操作按钮*/
+.btn-tooltip{margin-left:5px;padding:4px 10px;}
+
+/*详细信息里的表格*/
+.detail-view{margin-bottom:0;}
+.detail-view tbody tr th{vertical-align:inherit;}
+.detail-view tbody tr td{vertical-align:inherit;}
+
+/*公众号头像*/
+.user-avatar{width:50px;height:50px;}
+
+/*封面图片*/
+.user-thumb{width:40px;height:40px;cursor:pointer;}
+
+/*弹出框里的搜索框*/
+.user-dialog-search .form-group{display: inline-block;width: auto;vertical-align: middle;margin-bottom:0;}
+
+/*排序表格里的li高度*/
+.sortable .list-group-item{height:60px;line-height:40px;}
+
+/*自动搜索下拉框*/
+.typeahead{width:auto;}
+.typeahead li strong{color:#a94442;}
+
+/*上传进度框*/
+.upload-loading{height:32px;line-height:32px;}
+.upload-loading span.ui-dialog-loading{float:left;margin-right:10px;}
+
+/*表单里的表格*/
+.form-table{margin-bottom:0;}
+.form-table>tbody>tr>td{padding:8px 0;border-top:none;}

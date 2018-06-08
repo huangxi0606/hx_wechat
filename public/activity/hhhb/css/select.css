@@ -1,0 +1,42 @@
+@charset "utf-8";
+.select {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background: #ececec;
+    padding-left: 2%;
+	border-radius:5px;
+	border:2px #ffc600 solid;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+.select:after {
+    content: '';
+    position: absolute;
+    right: 5px;
+    width: 0px;
+    height: 0px;
+	color:#ffc600;
+    border-left: 5px outset transparent;
+    border-right: 5px outset transparent;
+}
+.select:after {
+    top: 10px;
+    border-top: 8px solid #ffc600;
+}
+.select > select {
+    position:relative;
+    z-index: 2;
+    width: 112%;
+    height: 28px;
+    line-height:18px;
+    padding:0;
+    color: #b1b1b1;
+    background:none;
+    border: 0;
+    -webkit-appearance: none;
+}
+.select > select:focus {
+    color: #000;
+    outline: 0;
+}
