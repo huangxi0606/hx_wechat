@@ -14,16 +14,6 @@
     @show
 </head>
 <body>
-
-<!-- 头部及导航 start-->
-{{--<div class="top">--}}
-    {{--<p class="title"><i class="menu glyphicon glyphicon-th-large"></i>@yield('header')</p>--}}
-    {{--@section('logo')--}}
-    {{--<img src="/home/images/logo.jpg" alt="" style="width: 100%;">--}}
-    {{--@show--}}
-{{--</div>--}}
-<!-- 头部及导航 end-->
-
 @section('content')
 @show
 <script src="{{asset('js/jquery.min.js?v=2.1.4')}}"></script>

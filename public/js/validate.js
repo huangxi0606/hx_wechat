@@ -66,19 +66,23 @@ function isidcard(str) {
     return true;
 }
 //AJAX提交数据
-function post(url, data) {
-    var defer = $.Deferred();
-    $.ajax({
-        type: 'POST',
-        url: url,
-        data: data,
-        dataType: 'json',
-        success: function (msg) {
-            defer.resolve(msg);
-        }
-    });
-    return defer.promise();
-}
+// function post(url, data) {
+//     var defer = $.Deferred();
+//     $.ajax({
+//         // headers: {
+//         //     'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+//         // },
+//         type: 'POST',
+//         url: url,
+//         data: data,
+//
+//         dataType: 'json',
+//         success: function (msg) {
+//             defer.resolve(msg);
+//         }
+//     });
+//     return defer.promise();
+// }
 //判断是否存在于数组中
 function in_array(search, array) {
     for (var i in array) {
